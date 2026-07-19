@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bqct36r4oas6c"]
+
+[ext_resource type="Script" uid="uid://d0dlfehw3r8ou" path="res://core/game/Main.cs" id="1_xiose"]
+[ext_resource type="Script" uid="uid://c14strbruka2a" path="res://core/game/state_machine/StateMachine.cs" id="2_iwuaf"]
+[ext_resource type="Script" uid="uid://dwcmof48js2sg" path="res://core/game/state_machine/CombatState.cs" id="3_m0dgr"]
+[ext_resource type="Script" uid="uid://bs7f3wvi62wu7" path="res://core/game/state_machine/ExplorationState.cs" id="4_it7jy"]
+
+[node name="Main" type="Node" unique_id=64488192]
+script = ExtResource("1_xiose")
+
+[node name="StateMachine" type="Node" parent="." unique_id=744278575]
+script = ExtResource("2_iwuaf")
+
+[node name="CombatState" type="Node" parent="StateMachine" unique_id=1997714923]
+script = ExtResource("3_m0dgr")
+
+[node name="ExplorationState" type="Node" parent="StateMachine" unique_id=1434201778]
+script = ExtResource("4_it7jy")
+
+[node name="Game" type="Node" parent="." unique_id=1124168406]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=709860178]

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://da00bulwu4556"]
+
+[ext_resource type="Script" uid="uid://cgeshuwvk6i4c" path="res://core/timer/TimerBar.cs" id="1_q7b71"]
+[ext_resource type="PackedScene" uid="uid://c72k5iep1npyp" path="res://core/timer/timer_segment.tscn" id="2_vv6qp"]
+[ext_resource type="Texture2D" uid="uid://d2tvxg2rrkyje" path="res://assets/timer.png" id="3_fo7fl"]
+
+[node name="TimerBar" type="Control" unique_id=1696132811]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q7b71")
+SegmentScene = ExtResource("2_vv6qp")
+WaitTimer = 5.0
+Length = 3
+
+[node name="Timer" type="Timer" parent="." unique_id=731330449]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1078283852]
+layout_mode = 0
+texture = ExtResource("3_fo7fl")
+
+[node name="Arrow" type="Control" parent="." unique_id=410462749]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Arrow" unique_id=847881939]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SegmentContainer" type="Container" parent="." unique_id=56350669]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 16.0
+
+[connection signal="timeout" from="Timer" to="." method="_OnTimerTimeout"]

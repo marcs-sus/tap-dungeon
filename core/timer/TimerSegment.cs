@@ -1,9 +1,8 @@
 using Godot;
 using System;
 
-public partial class Timer : Control
+public partial class TimerSegment : Control
 {
-    [Export] public PackedScene SegmentScene;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()

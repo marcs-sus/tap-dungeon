@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c72k5iep1npyp"]
 
+[ext_resource type="Script" uid="uid://dghwjqhfk21vn" path="res://core/timer/TimerSegment.cs" id="1_q8vss"]
+
 [node name="TimerSegment" type="Control" unique_id=1193148453]
 layout_mode = 3
 anchors_preset = 15
@@ -7,8 +9,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_q8vss")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1473555523]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=2139935536]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

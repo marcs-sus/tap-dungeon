@@ -14,4 +14,14 @@ public partial class ExplorationState : State
     public override void _Process(double delta)
     {
     }
+
+    public override void Enter(State previousState)
+    {
+        CombatState.Enter(previousState);
+    }
+
+    public override void Exit()
+    {
+        CombatState.Exit();
+    }
 }

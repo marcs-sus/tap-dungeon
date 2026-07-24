@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class State : Node
+public abstract partial class State : Node
 {
     public Node Parent;
     public StateMachine StateMachine;
@@ -16,11 +16,7 @@ public partial class State : Node
     {
     }
 
-    public virtual void Enter(State previousState)
-    {
-    }
+    public abstract void Enter(State previousState);
 
-    public virtual void Exit()
-    {
-    }
+    public abstract void Exit();
 }
